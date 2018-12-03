@@ -20,7 +20,7 @@ function makePoints(){
         let p = new Point(width/2+200*cos(angle), 
             			height/2+200*sin(angle));
         points.push(p);
-    }
+    };
     
     current = new Point(width/2, height/2);
     
@@ -28,7 +28,7 @@ function makePoints(){
     fill(255);
     for(let i = 0; i<points.length; i++){
         points[i].draw(10);
-    }
+    };
 }
 	
 	

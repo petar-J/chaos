@@ -3,15 +3,12 @@ let last = 0,x =0;
 let c = 0;
 let n = 3;
 let para = document.querySelector('.para');
+let more = document.querySelector('#left');
+let less = document.querySelector('#right');
 
-function setup() {
-    color = {
-        0:[255,0,0],
-        1:[0,255,0],
-        2:[0,0,255]
-    };
-    createCanvas(innerWidth, innerHeight);
-    noStroke();
+more.onclick = function(){n++; makePoints();};
+less.onclick = function(){n--; makePoints();};
+function makePoints(){
     points = [];
   
   	for(let i = 0; i < n; i++){
@@ -28,7 +25,19 @@ function setup() {
     for(let i = 0; i<points.length; i++){
         points[i].draw(10);
     }
-    
+}
+	
+	
+
+function setup() {
+    color = {
+        0:[255,0,0],
+        1:[0,255,0],
+        2:[0,0,255]
+    };
+    createCanvas(innerWidth, innerHeight);
+    noStroke();
+    makePoints();
     
 }
 

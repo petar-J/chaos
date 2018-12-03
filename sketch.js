@@ -47,7 +47,7 @@ function setup() {
 
 function draw() {
     for(let i = 0; i < 300; i++){
-	if(saveLast){while(x==last){ = floor(random(points.length)); }}
+	if(saveLast){while(x==last){ x = floor(random(points.length)); }}
 	
         //while (x==last){      //dont repeat the same point
         x = floor(random(points.length)); 

@@ -5,6 +5,10 @@ let n = 3;
 let para = document.querySelector('.para');
 let more = document.querySelector('#left');
 let less = document.querySelector('#right');
+let saveLast = false;
+let lastButton = document.querySelector('#down');
+lastButton.onclick = function(){saveLast?saveLast=false:saveLast=true;}
+	
 
 more.onclick = function(){n++; makePoints();};
 less.onclick = function(){n--; makePoints();};
@@ -17,7 +21,7 @@ function makePoints(){
             			height/2+200*sin(angle));
         points.push(p);
     }
-  
+    
     current = new Point(width/2, height/2);
     
     background(160);
@@ -43,6 +47,8 @@ function setup() {
 
 function draw() {
     for(let i = 0; i < 300; i++){
+	if(saveLast){while(x==last){ = floor(random(points.length)); }}
+	
         //while (x==last){      //dont repeat the same point
         x = floor(random(points.length)); 
         //}

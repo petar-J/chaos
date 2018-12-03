@@ -64,10 +64,16 @@ function draw() {
         }
 }
 
+function mousePressed(){for(let i = 0;i<points.length;i++){let p = points[i];if(mouseX<=p.x+10 and mouseX>=p.x-10 and mouseY<=p.y+10 and mouseY>=p.y-10){}}
+}
+	
+
 class Point{
 	constructor(x, y){
 		this.x = x;
 		this.y = y;
+		this.selected=false;
+		
 	}
 	draw(r=1){
         fill(color[x%3]);

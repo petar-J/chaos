@@ -7,7 +7,7 @@ let more = document.querySelector('#left');
 let less = document.querySelector('#right');
 let saveLast = false;
 let lastButton = document.querySelector('#down');
-lastButton.onclick = function(){saveLast?saveLast=false:saveLast=true; makePoints();}
+lastButton.onclick = function(){saveLast?saveLast=false:saveLast=true; makePoints();};
 	
 
 more.onclick = function(){n++; makePoints();};

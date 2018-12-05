@@ -64,8 +64,8 @@ function draw() {
         }
 }
 
-function mousePressed(){for(let i = 0;i<points.length;i++){let p = points[i];if(mouseX<=p.x+10 && mouseX>=p.x-10 && mouseY<=p.y+10 && mouseY>=p.y-10){}}
-}
+//function mousePressed(){for(let i = 0;i<points.length;i++){let p = points[i];if(mouseX<=p.x+10 && mouseX>=p.x-10 && mouseY<=p.y+10 && mouseY>=p.y-10){}}
+// }
 	
 
 class Point{

@@ -47,11 +47,13 @@ function setup() {
 
 function draw() {
     for(let i = 0; i < 100; i++){
-	if(saveLast){while(x==last){ x = floor(random(points.length)); }}
 	
         //while (x==last){      //dont repeat the same point
         x = floor(random(points.length)); 
         //}
+	    
+	if(saveLast){while(x==last){ x = floor(random(points.length)); }}
+	    
         current.x -= (current.x-points[x].x)/2;
         current.y -= (current.y-points[x].y)/2;
 

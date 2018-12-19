@@ -15,7 +15,7 @@ less.onclick = function(){n--; makePoints();};
 function makePoints(){
     points = [];
   
-  	for(let i = 0; i < n; i++){
+    for(let i = 0; i < n; i++){
     	let angle = PI/4+(i*TWO_PI/n);
         let p = new Point(width/2+200*cos(angle), 
             			height/2+200*sin(angle));
@@ -52,7 +52,7 @@ function draw() {
         x = floor(random(points.length)); 
         //}
 	    
-	if(saveLast){while(x==last){ x = floor(random(points.length)); }}
+	if(saveLast){while(x==(last+1)%n){ x = floor(random(points.length)); }}
 	    
         current.x -= (current.x-points[x].x)/2;
         current.y -= (current.y-points[x].y)/2;

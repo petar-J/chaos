@@ -6,30 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>sketch</title>
     <style>
-        body{display:flex;}
-        #down{
-            order:3;
-        }
-        #left{
-            order:2;
-        }
-        #right{
-            order:4;
-        }
-        .para{
-            order: 5;
-            color: black;
+        .buttons{
+            display:flex;
         }
         canvas{
-            
+            display: block;
         }
     </style>
 </head>
 <body>
-        <button id="down">down</button> 
+    <div class="buttons">
+        <button id="down">limit</button> 
         <button id="right">remove one</button>
         <button id="left">add one</button>
         <p class="para"></p>
+    </div>
         
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>

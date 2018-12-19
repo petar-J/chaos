@@ -16,7 +16,7 @@ function makePoints(){
     points = [];
   
   	for(let i = 0; i < n; i++){
-    	let angle = i*TWO_PI/n;
+    	let angle = PI/4+i*TWO_PI/n;
         let p = new Point(width/2+200*cos(angle), 
             			height/2+200*sin(angle));
         points.push(p);

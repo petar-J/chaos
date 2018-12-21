@@ -2,12 +2,17 @@ let points, current;
 let last = 0,x =0;
 let c = 0;
 let n = 3;
+let ntogg = 0;
 let para = document.querySelector('.para');
 let more = document.querySelector('#left');
 let less = document.querySelector('#right');
 let saveLast = false;
 let lastButton = document.querySelector('#down');
 lastButton.onclick = function(){saveLast?saveLast=false:saveLast=true; makePoints();};
+
+let tog = document.querySelector('toggle');
+tog.onclick = function (){ntog==0 ? ntogg=-1 : ntogg=0; makePoints();};
+	
 	
 
 more.onclick = function(){n++; makePoints();};
@@ -52,7 +57,7 @@ function draw() {
         x = floor(random(points.length)); 
         //}
 	    
-	if(saveLast){while(x==(last+1)%n){ x = floor(random(points.length)); }}
+	if(saveLast){while(x==(last+ntogg)%n){ x = floor(random(points.length)); }}
 	    
         current.x -= (current.x-points[x].x)/2;
         current.y -= (current.y-points[x].y)/2;

@@ -10,7 +10,7 @@ let saveLast = false;
 let lastButton = document.querySelector('#down');
 lastButton.onclick = function(){saveLast?saveLast=false:saveLast=true; makePoints();};
 
-let tog = document.querySelector('toggle');
+let tog = document.querySelector('#toggle');
 tog.onclick = function (){ntog==0 ? ntogg=-1 : ntogg=0; makePoints();};
 	
 	
